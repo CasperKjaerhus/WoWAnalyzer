@@ -1,6 +1,5 @@
 // Spells such as on use casts or buffs triggered by items from any dungeon
-
-const itemSpells = {
+const dungeonItemSpells = {
   //De Other Side
   INSCRUTABLE_QUANTUM_DEVICE_CRIT: {
     id: 330366,
@@ -22,7 +21,6 @@ const itemSpells = {
     name: 'Inscrutable Quantum Device',
     icon: 'inv_trinket_80_titan02a',
   },
-  
 } as const;
 
-export default itemSpells;
+export default dungeonItemSpells;
