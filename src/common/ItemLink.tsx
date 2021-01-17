@@ -10,8 +10,8 @@ interface Props {
   id: number;
   children?: React.ReactNode;
   details?: {
-    itemLevel: number;
-    quality: number;
+    itemLevel?: number;
+    quality?: number;
   };
   quality?: number;
   icon?: boolean;
@@ -36,7 +36,7 @@ const ItemLink = (props: Props) => {
   if (props.quality !== undefined && props.quality !== null) {
     quality = props.quality;
   } else if (props.details) {
-    quality = Math.max(props.details.itemLevel >= EPIC_ITEMS_ILVL ? 4 : 3, props.details.quality);
+    quality = Math.max(props.details.itemLevel! >= EPIC_ITEMS_ILVL ? 4 : 3, props.details.quality!);
   } else {
     quality = ITEMS[id] ? ITEMS[id].quality : 0;
   }
@@ -46,7 +46,7 @@ const ItemLink = (props: Props) => {
       href={TooltipProvider.item(id, details)}
       target="_blank"
       rel="noopener noreferrer"
-      className={getItemQualityLabel(quality) + 'item-link-text'}
+      className={getItemQualityLabel(quality!) + 'item-link-text'}
       ref={elem => {setElem(elem)}}
       {...others}
     >

@@ -1,10 +1,6 @@
-import { Covenant } from 'parser/core/Events';
 import indexById from 'common/indexById';
 
-const COVENANTS: {
-  [key: string]: Covenant,
-  [id: number]: Covenant,
-} = {
+const COVENANTS = {
   KYRIAN: {
     name: 'Kyrian',
     description: 'The kyrian are steadfast guardians of the afterlife who bear the souls of the dead into the Shadowlands. Eternally devoted to duty and service, only the worthy may enter their ranks.',
@@ -33,8 +29,13 @@ const COVENANTS: {
     spellID: 321078,
     icon: 'ui_sigil_necrolord',
   },
-};
-export default indexById(COVENANTS);
+} as const;
+
+const ids = indexById(COVENANTS);
+
+const combine: typeof COVENANTS & typeof ids = { ...COVENANTS, ...ids }
+
+export default combine;
 
 
 export function getCovenantById(id: number){

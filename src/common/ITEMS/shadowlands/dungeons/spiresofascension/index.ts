@@ -6,9 +6,7 @@
  *   quality: number,
  * },
  */
-import { ItemList } from "common/ITEMS/Item";
-
-const items: ItemList = {
+const items = {
   //region Kin-tara
 
   //endregion
@@ -18,6 +16,8 @@ const items: ItemList = {
     id: 180116,
     name: 'Overcharged Anima Battery',
     icon: 'inv_battery_01',
+    itemLevel: undefined,
+    quality: undefined
   },
   //endregion
 
@@ -28,5 +28,5 @@ const items: ItemList = {
   //region Devos, Paragon of Doubt
 
   //endregion
-};
+} as const;
 export default items;

@@ -617,7 +617,7 @@ const spells = {
     name: 'Runic Power',
     icon: 'inv_sword_62',
   },
-};
+} as const;
 
 const runeforges = {
   RUNE_OF_THE_FALLEN_CRUSADER: {
@@ -677,7 +677,9 @@ const runeforges = {
   },
 } as const;
 
-export default {
+const total = {
   ...spells,
   ...runeforges
 } as const;
+
+export default total;

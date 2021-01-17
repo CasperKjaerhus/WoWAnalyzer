@@ -130,7 +130,7 @@ type MappedEventTypes = {
 export type AnyEvent<ET extends keyof MappedEventTypes = keyof MappedEventTypes> = MappedEventTypes[ET];
 
 export interface Ability {
-  name: string;
+  name?: string;
   guid: number;
   type: number;
   abilityIcon: string;
@@ -671,9 +671,9 @@ export type PhaseEndEvent = BasePhaseEvent<EventType.PhaseEnd>
 
 export interface Item {
   id: number;
-  quality: number;
+  quality?: number;
   icon: string;
-  itemLevel: number;
+  itemLevel?: number;
   bonusIDs?: number | number[];
   permanentEnchant?: number;
   temporaryEnchant?: number;

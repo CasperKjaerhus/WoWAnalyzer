@@ -11,7 +11,7 @@ class DispelTracker extends Analyzer {
   dispelEvents = new Map<number, number>();
   dispelCount = 0;
 
-  blackList = [SPELLS.WINDWALKING.id];
+  blackList: number[] = [SPELLS.WINDWALKING.id];
 
   constructor(options: Options) {
     super(options);
@@ -31,7 +31,7 @@ class DispelTracker extends Analyzer {
       // The spells need to be defined so the view doesn't crash
       SPELLS[dispelledId] = {
         id: dispelledId,
-        name: abilityDispelled.name,
+        name: abilityDispelled.name!,
         icon: abilityDispelled.abilityIcon.replace('.jpg', ''),
       };
     }
