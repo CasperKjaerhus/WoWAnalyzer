@@ -1,4 +1,6 @@
-const items = {
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   //region Discipline
 
   //endregion
@@ -18,5 +20,5 @@ const items = {
     icon: 'inv_glyph_minorpriest',
   },
   //endregion
-} as const;
+};
 export default items;

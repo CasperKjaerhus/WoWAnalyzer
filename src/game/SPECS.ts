@@ -19,7 +19,10 @@ export interface Spec {
   };
 }
 
-const SPECS = {
+const SPECS: {
+  [key: string]: Spec;
+  [id: number]: Spec;
+} = {
   ARCANE_MAGE: {
     id: 62,
     index: 0,
@@ -740,8 +743,6 @@ const SPECS = {
       spec: 2,
     },
   },
-} as const;
+};
 
-const SPECLIST: typeof SPECS & Record<number, Spec> = { ...SPECS, ...indexById(SPECS) };
-
-export default SPECLIST;
+export default indexById(SPECS);

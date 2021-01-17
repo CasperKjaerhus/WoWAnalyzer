@@ -1,3 +1,5 @@
+import { ItemList } from "common/ITEMS/Item";
+
 /**
  * NAME: {
  *   id: number,
@@ -5,7 +7,7 @@
  *   icon: string,
  * },
  */
-const items = {
+const items: ItemList = {
 
-} as const;
+};
 export default items;

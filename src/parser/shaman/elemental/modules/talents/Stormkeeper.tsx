@@ -9,13 +9,12 @@ import Events, { DamageEvent } from 'parser/core/Events';
 import Statistic from 'interface/statistics/Statistic';
 import BoringSpellValueText from 'interface/statistics/components/BoringSpellValueText';
 import ItemDamageDone from 'interface/ItemDamageDone';
-import Spell from 'common/SPELLS/Spell';
 
-const AFFECTED_ABILITIES: Spell[] = [
-  SPELLS.LIGHTNING_BOLT_OVERLOAD,
-  SPELLS.LIGHTNING_BOLT,
-  SPELLS.CHAIN_LIGHTNING_OVERLOAD,
-  SPELLS.CHAIN_LIGHTNING,
+const AFFECTED_ABILITIES = [
+  SPELLS.LIGHTNING_BOLT_OVERLOAD.id,
+  SPELLS.LIGHTNING_BOLT.id,
+  SPELLS.CHAIN_LIGHTNING_OVERLOAD.id,
+  SPELLS.CHAIN_LIGHTNING.id,
 ];
 
 class Stormkeeper extends Analyzer {
@@ -23,7 +22,7 @@ class Stormkeeper extends Analyzer {
 
   constructor(options: Options) {
     super(options);
-    this.active = this.selectedCombatant.hasTalent(SPELLS.STORMKEEPER_TALENT.id);
+    this.active = this.selectedCombatant.hasTalent(SPELLS.STORMKEEPER_TALENT_ELEMENTAL.id);
     this.addEventListener(
       Events.damage.by(SELECTED_PLAYER).spell(AFFECTED_ABILITIES),
       this.onSKDamage,
@@ -31,7 +30,7 @@ class Stormkeeper extends Analyzer {
   }
 
   onSKDamage(event: DamageEvent) {
-    if (!this.selectedCombatant.hasBuff(SPELLS.STORMKEEPER_TALENT.id)) {
+    if (!this.selectedCombatant.hasBuff(SPELLS.STORMKEEPER_TALENT_ELEMENTAL.id)) {
       return;
     }
 
@@ -44,7 +43,7 @@ class Stormkeeper extends Analyzer {
         position={STATISTIC_ORDER.OPTIONAL()}
         size="flexible"
       >
-        <BoringSpellValueText spell={SPELLS.STORMKEEPER_TALENT}>
+        <BoringSpellValueText spell={SPELLS.STORMKEEPER_TALENT_ELEMENTAL}>
           <>
             <ItemDamageDone amount={this.damageDoneByBuffedCasts} />
           </>

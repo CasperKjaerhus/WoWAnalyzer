@@ -1,4 +1,4 @@
-const spells = {
+export default {
   // Group by boss (with comments)
 
   //Shriekwing
@@ -21,6 +21,4 @@ const spells = {
 
   //Sire Denathrius
 
-} as const;
-
-export default spells;
+};

@@ -34,11 +34,11 @@ class BlackOxBrew extends Analyzer {
   protected abilities!: Abilities;
   protected spellUsable!: SpellUsable;
 
-  cdr: Record<number, number> = {
+  cdr = {
     [SPELLS.PURIFYING_BREW.id]: 0,
     [SPELLS.CELESTIAL_BREW.id]: 0,
   };
-  wastedCDR: Record<number, number> = {
+  wastedCDR = {
     [SPELLS.PURIFYING_BREW.id]: 0,
     [SPELLS.CELESTIAL_BREW.id]: 0,
   };

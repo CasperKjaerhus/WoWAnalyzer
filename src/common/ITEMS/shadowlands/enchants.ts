@@ -1,4 +1,6 @@
-const enchants = {
+import { ItemList, Enchant } from "common/ITEMS/Item";
+
+const enchants: ItemList<Enchant> = {
   ENCHANT_WEAPON_ASCENDED_VIGOR: {
     id: 172365,
     name: 'Enchant Weapon - Ascended Vigor',
@@ -229,6 +231,6 @@ const enchants = {
     icon: 'inv_blacksmithing_greaterweightstone',
     effectId: 6201,
   },
-} as const;
+};
 
 export default enchants;

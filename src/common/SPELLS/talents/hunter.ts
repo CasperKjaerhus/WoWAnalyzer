@@ -1,5 +1,7 @@
 // Generated file, changes will be overwritten!
-const talents = {
+import { SpellList } from '../Spell';
+
+const talents: SpellList = {
 
   //Shared
   TRAILBLAZER_TALENT: { id: 199921, name: 'Trailblazer', icon: 'ability_hunter_aspectmastery' },

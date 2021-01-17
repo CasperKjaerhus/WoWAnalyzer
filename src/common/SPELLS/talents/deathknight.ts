@@ -1,5 +1,7 @@
 // Generated file, changes will be overwritten!
-const talents = {
+import { SpellList } from '../Spell';
+
+const talents: SpellList = {
 
   //Shared
   DEATHS_REACH_TALENT: { id: 276079, name: 'Death\'s Reach', icon: 'spell_deathknight_strangulate' },

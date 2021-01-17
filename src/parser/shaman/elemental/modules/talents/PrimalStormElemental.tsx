@@ -12,9 +12,8 @@ import { ThresholdStyle, When } from 'parser/core/ParseResults';
 import Statistic from 'interface/statistics/Statistic';
 import BoringSpellValueText from 'interface/statistics/components/BoringSpellValueText';
 import ItemDamageDone from 'interface/ItemDamageDone';
-import Spell from 'common/SPELLS/Spell';
 
-const damagingCasts: Spell[] = [SPELLS.EYE_OF_THE_STORM, SPELLS.WIND_GUST, SPELLS.CALL_LIGHTNING];
+const damagingCasts = [SPELLS.EYE_OF_THE_STORM.id, SPELLS.WIND_GUST.id, SPELLS.CALL_LIGHTNING.id];
 const CALL_LIGHTNING_BUFF_DURATION: number = 15000;
 
 class PrimalStormElemental extends Analyzer {
@@ -87,7 +86,7 @@ class PrimalStormElemental extends Analyzer {
   }
 
   suggestions(when: When) {
-    const unusedSpellsString = this.unusedSpells.map(x=>(SPELLS[Number(x)].name)).join(', ');
+    const unusedSpellsString = this.unusedSpells.map(x=>(SPELLS[x].name)).join(', ');
 
     when(this.unusedSpellsSuggestionTresholds)
       .addSuggestion((suggest, actual, recommended) => suggest(<span> Your Storm Elemental is not using all of it's spells. Check if Wind Gust and Call Lightning are set to autocast and you are using Eye Of The Storm.</span>)

@@ -1,5 +1,7 @@
 // Generated file, changes will be overwritten!
-const talents = {
+import { SpellList } from '../Spell';
+
+const talents: SpellList = {
 
   //Shared
   SHIMMER_TALENT: { id: 212653, name: 'Shimmer', icon: 'spell_arcane_massdispel', manaCost: 1000 },

@@ -1,4 +1,6 @@
-const legendaries = {
+import { LegendarySpell, SpellList } from "common/SPELLS/Spell";
+
+const legendaries: SpellList<LegendarySpell> = {
   //region Blood
   BRYNDAORS_MIGHT: {
     id: 334501,

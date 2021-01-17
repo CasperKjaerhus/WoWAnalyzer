@@ -1,7 +1,9 @@
 import safeMerge from 'common/safeMerge';
 
+import { ItemList } from 'common/ITEMS/Item';
+
 import Alchemy from './alchemy';
 import Inscription from './inscription';
 
-const items = safeMerge<typeof Alchemy & typeof Inscription>(Alchemy, Inscription);
+const items: ItemList = safeMerge(Alchemy, Inscription);
 export default items;

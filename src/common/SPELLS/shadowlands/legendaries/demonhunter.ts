@@ -1,5 +1,6 @@
+import { LegendarySpell, SpellList } from "common/SPELLS/Spell";
 
-const legendaries = {
+const legendaries: SpellList<LegendarySpell> = {
   //region Havoc
   CHAOS_THEORY: {
     id: 337551,

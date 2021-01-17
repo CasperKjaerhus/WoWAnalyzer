@@ -5,12 +5,14 @@
  *   icon: string,
  *   quality: number,
  * },
-*/
-const items = {
+ */
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   INSCRUTABLE_QUANTUM_DEVICE: {
     id: 179350,
     name: 'Inscrutable Quantum Device',
     icon: 'inv_trinket_80_titan02a',
   },
-} as const;
+};
 export default items;

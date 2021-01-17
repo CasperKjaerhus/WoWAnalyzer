@@ -1,6 +1,10 @@
+import { Soulbind } from 'parser/core/Events';
 import indexById from 'common/indexById';
 
-const SOULBINDS = {
+const SOULBINDS: {
+  [key: string]: Soulbind,
+  [id: number]: Soulbind,
+} = {
   NIYA: {
     name: 'Niya',
     id: 1,
@@ -74,6 +78,4 @@ const SOULBINDS = {
     garrisonTalentTreeId: 365,
   },
 };
-
-
-export default { ...SOULBINDS, ...indexById(SOULBINDS) };
+export default indexById(SOULBINDS);

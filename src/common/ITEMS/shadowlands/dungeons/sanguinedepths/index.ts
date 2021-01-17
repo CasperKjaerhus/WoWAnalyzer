@@ -6,7 +6,9 @@
  *   quality: number,
  * },
  */
-const items = {
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   //region Kryxis the Voracious
 
   //endregion
@@ -22,5 +24,5 @@ const items = {
   //region General Kaal
 
   //endregion
-}as const;
+};
 export default items;

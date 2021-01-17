@@ -5,8 +5,9 @@
  *   icon: string,
  * },
  */
+import { ItemList } from "common/ITEMS/Item";
 
-const items = {
+const items: ItemList = {
 
-} as const;
+};
 export default items;

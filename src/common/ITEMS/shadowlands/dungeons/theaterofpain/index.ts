@@ -6,7 +6,9 @@
  *   quality: number,
  * },
  */
-const items = {
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   //region An Affront of Challengers
 
   //endregion
@@ -26,5 +28,5 @@ const items = {
   //region Mordretha, the Endless Empress
 
   //endregion
-} as const;
+};
 export default items;

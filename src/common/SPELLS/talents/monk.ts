@@ -1,5 +1,7 @@
 // Generated file, changes will be overwritten!
-const talents = {
+import { SpellList } from '../Spell';
+
+const talents: SpellList = {
 
   //Shared
   EYE_OF_THE_TIGER_TALENT: { id: 196607, name: 'Eye of the Tiger', icon: 'ability_druid_primalprecision' },

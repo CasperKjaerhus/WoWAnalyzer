@@ -1,4 +1,6 @@
-const items = {
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   //region Balance
 
   //endregion
@@ -18,5 +20,5 @@ const items = {
   //region Shared
 
   //endregion
-} as const;
+};
 export default items;

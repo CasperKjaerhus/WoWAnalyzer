@@ -1,4 +1,6 @@
-const items = {
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   //region Holy
 
   //endregion
@@ -14,5 +16,5 @@ const items = {
   //region Shared
 
   //endregion
-} as const;
+};
 export default items;

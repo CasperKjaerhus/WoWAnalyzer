@@ -60,6 +60,6 @@ const PETS = {
     id: 53006,
     name: 'Spirit Link Totem',
   }
-} as const;
-const ids = indexById(PETS);
-export default {...PETS, ...ids};
+};
+
+export default indexById(PETS);

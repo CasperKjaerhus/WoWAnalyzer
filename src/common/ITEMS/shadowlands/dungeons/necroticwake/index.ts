@@ -6,7 +6,9 @@
  *   quality: number,
  * },
  */
-const items= {
+import { ItemList } from "common/ITEMS/Item";
+
+const items: ItemList = {
   //region Blightbone
 
   //endregion
@@ -22,6 +24,6 @@ const items= {
   //region Nalthor the Rimebinder
 
   //endregion
-} as const;
+};
 export default items;
 

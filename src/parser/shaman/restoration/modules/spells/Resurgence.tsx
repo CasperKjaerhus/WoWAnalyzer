@@ -22,7 +22,7 @@ import ManaTideTotem, { MANA_REGEN_PER_SECOND } from './ManaTideTotem';
 import WaterShield from './WaterShield';
 
 
-const SPELLS_PROCCING_RESURGENCE: Record<number, number> = {
+const SPELLS_PROCCING_RESURGENCE = {
   [SPELLS.HEALING_SURGE.id]: 0.006,
   [SPELLS.HEALING_WAVE.id]: 0.01,
   [SPELLS.CHAIN_HEAL.id]: 0.0025,

@@ -1,4 +1,4 @@
-const spells = {
+export default {
   // Group by boss (with comments)
 
   //Shriekwing
@@ -60,6 +60,5 @@ const spells = {
     name: 'Indignation',
     icon: 'spell_animarevendreth_nova',
   },
-} as const;
 
-export default spells;
+};

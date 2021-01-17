@@ -2,9 +2,8 @@
 import SPELLS from 'common/SPELLS';
 import EventsNormalizer from 'parser/core/EventsNormalizer';
 import { AnyEvent, EventType } from 'parser/core/Events';
-import Spell from 'common/SPELLS/Spell';
 
-const ARCANE_CHARGE_SPELLS: Spell[] = [
+const ARCANE_CHARGE_SPELLS = [
   SPELLS.ARCANE_BLAST,
   SPELLS.ARCANE_EXPLOSION,
   SPELLS.TOUCH_OF_THE_MAGI,
@@ -23,7 +22,7 @@ class ArcaneCharges extends EventsNormalizer {
     events.forEach((event, eventIndex) => {
       fixedEvents.push(event);
 
-      if (event.type === EventType.Cast && ARCANE_CHARGE_SPELLS.some(spell => spell.id === event.ability.guid)) {
+      if (event.type === EventType.Cast && ARCANE_CHARGE_SPELLS.includes(event.ability)) {
         const castTimestamp = event.timestamp;
 
         for (let previousEventIndex = eventIndex; previousEventIndex >= 0; previousEventIndex -= 1) {
